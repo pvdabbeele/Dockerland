@@ -1,7 +1,7 @@
 FROM debian:bullseye-slim
 
-# docker build --build-arg user=%REQUIRED_ACCOUNT% --name %TARGET_CONTAINER% -t %IMAGE_NAME -f %DOCKERFILE% .
-# docker run -h %HOSTNAME% -it %TARGET_CONTAINER%
+# docker build --build-arg user=%REQUIRED_ACCOUNT% -t %IMAGE_NAME% -f %DOCKERFILE% .
+# docker run -h %HOSTNAME% -it %IMAGE_NAME%
 
 ARG user=guest
 

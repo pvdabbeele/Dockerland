@@ -14,8 +14,7 @@ USER root
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN groupadd ${group}
-RUN useradd -m -g ${group} -s /bin/bash ${user}
+RUN useradd -U -m -s /bin/bash ${user}
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates dnsutils git netcat openssl traceroute wget
 
 USER $user
